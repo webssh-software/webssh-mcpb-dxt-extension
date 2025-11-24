@@ -1,5 +1,5 @@
 {
-    "manifest_version": "0.1",
+    "manifest_version": "0.3",
     "id": "net.webssh.mcpb",
     "name": "webssh-mcpb-dxt-extension",
     "display_name": "WebSSH",
@@ -26,7 +26,7 @@
         "args": [
           "${__dirname}/server/index.js",
           "WebSSH",
-          "${user_config.sse_url}",
+          "http://localhost:${user_config.server_port}",
           "${user_config.bearer_token}"
         ]
       }
@@ -47,11 +47,14 @@
         "required": true
       },
       "server_port": {
-        "type": "string",
-        "title": "SSE Server URL",
-        "description": "The URL of the SSE endpoint to proxy to",
+        "type": "number",
+        "title": "API / MCP Server Port",
+        "description": "The port on which the WebSSH API / MCP server is running. Default is 1985.",
         "sensitive": false,
-        "required": true
+        "required": true,
+        "default": 1985,
+        "min": 1,
+        "max": 65535
       }
     },
     "compatibility": {
