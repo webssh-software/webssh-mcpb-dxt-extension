@@ -1,0 +1,64 @@
+{
+    "manifest_version": "0.1",
+    "id": "net.webssh.mcpb",
+    "name": "webssh-mcpb-dxt-extension",
+    "display_name": "WebSSH",
+    "version": "0.0.1",
+    "description": "WebSSH MCP Extension for your AI Workflows 🚀",
+    "long_description": "This extension integrates WebSSH with your AI workflows, enabling seamless SSH access and management directly from your AI applications. Leverage the power of WebSSH to enhance your AI-driven tasks with secure and efficient SSH connectivity.",
+    "author": {
+      "name": "Arnaud Mengus",
+      "url": "https://webssh.net"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/webssh-software/webssh-mcpb-dxt-extension"
+    },
+    "homepage": "https://webssh.net",
+    "documentation": "https://webssh.net/documentation/help/intelligence/api-mcp-server/",
+    "support": "https://webssh.net/support/",
+    "icon": "favicon.png",
+    "server": {
+      "type": "node",
+      "entry_point": "server/index.js",
+      "mcp_config": {
+        "command": "node",
+        "args": [
+          "${__dirname}/server/index.js",
+          "WebSSH",
+          "${user_config.sse_url}",
+          "${user_config.bearer_token}"
+        ]
+      }
+    },
+    "tools": [],
+    "keywords": [
+      "webssh",
+      "ssh",
+      "sysadmin"
+    ],
+    "license": "MIT",
+    "user_config": {
+      "bearer_token": {
+        "type": "string",
+        "title": "Authentication Bearer Token",
+        "description": "The bearer token used for authenticating with WebSSH API / MCP server. You can find it in your WebSSH settings.",
+        "sensitive": true,
+        "required": true
+      },
+      "server_port": {
+        "type": "string",
+        "title": "SSE Server URL",
+        "description": "The URL of the SSE endpoint to proxy to",
+        "sensitive": false,
+        "required": true
+      }
+    },
+    "compatibility": {
+      "claude_desktop": ">=1.0.734",
+      "platforms": ["darwin", "win32", "linux"],
+      "runtimes": {
+        "node": ">=16.0.0"
+      }
+    }
+  }
