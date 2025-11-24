@@ -1,6 +1,5 @@
 {
     "manifest_version": "0.3",
-    "id": "net.webssh.mcpb",
     "name": "webssh-mcpb-dxt-extension",
     "display_name": "WebSSH",
     "version": "0.0.1",
