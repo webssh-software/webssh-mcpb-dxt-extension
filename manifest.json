@@ -2,7 +2,7 @@
     "manifest_version": "0.3",
     "name": "webssh-mcpb-dxt-extension",
     "display_name": "WebSSH",
-    "version": "0.0.1",
+    "version": "0.0.4",
     "description": "WebSSH MCP Extension for your AI Workflows 🚀",
     "long_description": "This extension integrates WebSSH with your AI workflows, enabling seamless SSH access and management directly from your AI applications. Leverage the power of WebSSH to enhance your AI-driven tasks with secure and efficient SSH connectivity.",
     "author": {
@@ -25,7 +25,7 @@
         "args": [
           "${__dirname}/server/index.js",
           "WebSSH",
-          "http://localhost:${user_config.server_port}",
+          "http://localhost:${user_config.server_port}/mcp",
           "${user_config.bearer_token}"
         ]
       }

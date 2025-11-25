@@ -1,12 +1,12 @@
 {
   "name": "webssh-mcpb-dxt-extension",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "WebSSH MCP Extension for your AI Workflows 🚀",
   "main": "server/index.js",
   "type": "module",
   "scripts": {
-    "start": "node server/index.js WebSSH http://localhost:1985 BEARER_TOKEN",
-    "dev": "node server/index.js WebSSH http://localhost:1985 BEARER_TOKEN"
+    "start": "node server/index.js WebSSH http://localhost:1985/mcp BEARER_TOKEN",
+    "dev": "node server/index.js WebSSH http://localhost:1985/mcp BEARER_TOKEN"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.13.2"
