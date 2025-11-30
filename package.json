@@ -1,6 +1,6 @@
 {
   "name": "webssh-mcpb-dxt-extension",
-  "version": "0.0.4",
+  "version": "0.0.7",
   "description": "WebSSH MCP Extension for your AI Workflows 🚀",
   "main": "server/index.js",
   "type": "module",
