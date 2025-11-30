@@ -4,7 +4,7 @@
   "display_name": "WebSSH",
   "version": "0.0.8",
   "description": "WebSSH MCP Extension for your AI Workflows 🚀",
-  "long_description": "This extension integrates WebSSH with your AI workflows, enabling seamless SSH access and management directly from your AI applications. Leverage the power of WebSSH to enhance your AI-driven tasks with secure and efficient SSH connectivity.",
+  "long_description": "This extension integrates WebSSH with your AI workflows, enabling seamless SSH access and management directly from your AI applications. Leverage the power of WebSSH to enhance your AI-driven tasks with secure and efficient SSH connectivity. Docker Desktop >=v4.52 required.",
   "author": {
     "name": "Arnaud Mengus",
     "url": "https://webssh.net"
@@ -15,7 +15,7 @@
   },
   "homepage": "https://webssh.net",
   "documentation": "https://webssh.net/documentation/help/intelligence/api-mcp-server/",
-  "support": "https://webssh.net/support/",
+  "support": "https://github.com/webssh-software/webssh-mcpb-dxt-extension/issues",
   "icon": "favicon.png",
   "server": {
     "type": "node",
