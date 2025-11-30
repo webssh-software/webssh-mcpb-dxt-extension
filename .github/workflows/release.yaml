@@ -41,6 +41,8 @@ jobs:
           name: webssh-mcpb-dxt-extension
           path: webssh-mcpb-dxt-extension.mcpb
 
+      # git tag vX.Y.Z
+      # git push --tags 
       - name: Create GitHub Release
         if: startsWith(github.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v2
