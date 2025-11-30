@@ -5,12 +5,9 @@
   "main": "server/index.js",
   "type": "module",
   "scripts": {
-    "start": "node server/index.js WebSSH http://localhost:1985/mcp BEARER_TOKEN",
-    "dev": "node server/index.js WebSSH http://localhost:1985/mcp BEARER_TOKEN"
+    "start": "BEARER_TOKEN=put-it-here node server/main.cjs"
   },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.13.2"
-  },
+  "dependencies": {},
   "engines": {
     "node": ">=16.0.0"
   },

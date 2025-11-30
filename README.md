@@ -3,8 +3,13 @@ Blueprint forked from the awesome work of [Gomarble AI](https://github.com/gomar
 # WebSSH MCP Extension for your AI Workflows 🚀
 This extension integrates WebSSH with your AI workflows, enabling seamless SSH access and management directly from your AI applications. Leverage the power of WebSSH to enhance your AI-driven tasks with secure and efficient SSH connectivity.
 
+## Prerequisites
+To ensure smooth installation and operation of the WebSSH MCP Extension, please make sure you have the following prerequisites in place:
+- Docker Desktop installed on your machine.
+- And, that's it! The extension runs within a Docker container, so no additional software is required.
+
 ## Easy Installation
-1. Download the latest release here:
+1. Download the latest [release here](https://github.com/webssh-software/webssh-mcpb-dxt-extension/releases)
 2. Drag (or open) the .mcpb file into your MCP-compatible application to install the extension.
 
 ## Or Build Extension from Source
