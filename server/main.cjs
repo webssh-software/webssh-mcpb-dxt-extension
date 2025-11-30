@@ -16,6 +16,30 @@ if (!BEARER_TOKEN) {
 }
 
 /**
+ * UTILITY: Generate Environment with fixed PATH
+ * Factors out the logic to ensure Docker and its credential helpers are found.
+ */
+function getExtendedEnv() {
+    const commonPaths = [
+        '/usr/local/bin',
+        '/opt/homebrew/bin',
+        '/usr/bin',
+        '/bin',
+        '/usr/sbin',
+        '/sbin',
+        '/Applications/Docker.app/Contents/Resources/bin'
+    ];
+
+    // Combine robust paths with the existing system PATH
+    const fixedPath = commonPaths.join(':') + ':' + (process.env.PATH || '');
+
+    return {
+        ...process.env,
+        PATH: fixedPath
+    };
+}
+
+/**
  * Find the docker binary path
  */
 function getDockerPath() {
@@ -116,7 +140,8 @@ function ensureDockerIsRunning() {
 
     // 3. Spawn the container with full path
     const child = spawn(dockerPath, dockerArgs, {
-        stdio: ['pipe', 'pipe', 'inherit']  // stdin: pipe, stdout: pipe, stderr: inherit
+        stdio: ['pipe', 'pipe', 'inherit'],  // stdin: pipe, stdout: pipe, stderr: inherit
+        env: getExtendedEnv()
     });
 
     // Pipe stdin/stdout for MCP protocol
