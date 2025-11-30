@@ -2,7 +2,7 @@
   "manifest_version": "0.3",
   "name": "webssh-mcpb-dxt-extension",
   "display_name": "WebSSH",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "WebSSH MCP Extension for your AI Workflows 🚀",
   "long_description": "This extension integrates WebSSH with your AI workflows, enabling seamless SSH access and management directly from your AI applications. Leverage the power of WebSSH to enhance your AI-driven tasks with secure and efficient SSH connectivity.",
   "author": {
@@ -19,24 +19,16 @@
   "icon": "favicon.png",
   "server": {
     "type": "node",
-    "entry_point": "server/main.js",
+    "entry_point": "server/main.cjs",
     "mcp_config": {
-      "command": "docker",
+      "command": "node",
       "args": [
-        "run",
-        "--rm",
-        "--network",
-        "host",
-        "-i",
-        "-e",
-        "MCP_SERVER_URL=http://host.docker.internal:${user_config.server_port}",
-        "-e",
-        "MCP_AUTH=Bearer ${user_config.bearer_token}",
-        "ghcr.io/ibm/mcp-context-forge:0.9.0",
-        "python3",
-        "-m",
-        "mcpgateway.wrapper"
-      ]
+        "${__dirname}/server/main.cjs"
+      ],
+      "env": {
+        "SERVER_PORT": "${user_config.server_port}",
+        "BEARER_TOKEN": "${user_config.bearer_token}"
+      }
     }
   },
   "tools": [],
