@@ -1,5 +1,5 @@
 # WebSSH MCP Extension for your AI Workflows 🚀
-This extension integrates WebSSH with your AI workflows, enabling seamless SSH access and management directly from your AI applications. Leverage the power of WebSSH to enhance your AI-driven tasks with secure and efficient SSH connectivity.
+This extension integrates [WebSSH](https://webssh.net) with your AI workflows, enabling seamless SSH access and management directly from your AI applications. Leverage the power of WebSSH to enhance your AI-driven tasks with secure and efficient SSH connectivity.
 
 ## Prerequisites
 To ensure smooth installation and operation of the WebSSH MCP Extension, please make sure you have the following prerequisites in place:
